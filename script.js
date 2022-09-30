@@ -3,6 +3,8 @@ alert("Welcome to the special password generator! For create a new password plea
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+generatePassword();
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -36,3 +38,15 @@ const randomSpecialCharacter = specialCharacter[Math.floor(Math.random() * speci
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+function selectPasswordLength() {
+  passwordLength = prompt("Choose a number between '8' and '128' ");
+  // console.log(passwordLength);
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("INVALID SELECTION! Please select a number between '8' and '128");
+    selectPasswordLength();
+  }
+  //console.log(passwordLength);
+}
