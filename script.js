@@ -3,7 +3,6 @@ alert("Welcome to the special password generator! For create a new password plea
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-generatePassword();
 
 // Write password to the #password input
 function writePassword() {
@@ -35,7 +34,6 @@ const specialCharacter = ["!", "#", "$", "%", "&", "'", "*", "-", ".", "/", ":",
 const randomSpecialCharacter = specialCharacter[Math.floor(Math.random() * specialCharacter.length)];
 
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -49,4 +47,21 @@ function selectPasswordLength() {
     selectPasswordLength();
   }
   //console.log(passwordLength);
+}
+
+
+function selectPasswordCharacters() {
+  uppercaseSelection = confirm("Do you want uppercase characters in your password?");
+  lowercaseSelection = confirm("Do you want lowercase characters in your password?");
+  numericSelection = confirm("Do you want numeric characters in your password?");
+  specialSelection = confirm("Do you want special characters in your password?");
+  if (!(uppercaseSelection || lowercaseSelection || numericSelection || specialSelection)) {
+    alert("INVALID SELECTION! Please select at least one option. ");
+    selectPasswordCharacters();
+  }
+  // console.log(uppercaseSelection);
+  // console.log(lowercaseSelection);
+  // console.log(numericSelection);
+  // console.log(specialSelection);
+  // console.log(!(uppercaseSelection || lowercaseSelection || numericSelection || speacialSelection));
 }
