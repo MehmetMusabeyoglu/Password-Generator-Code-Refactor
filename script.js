@@ -106,6 +106,6 @@ function selectPasswordCharacterType() {
 }
 
 // generatePassword();
-alert(generatePassword);
 
 // passwordText=generatePassword();
+// document.getElementById("password")=alert(generatePassword());
